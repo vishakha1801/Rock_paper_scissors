@@ -7,6 +7,7 @@ let result_p=document.querySelector(".result");
 let rock_div =document.getElementById("r");
 let paper_div =document.getElementById("p");
 let scissors_div =document.getElementById("s");
+let reset_button = document.getElementById("reset-button");
 
 
 function getComputerChoice(){
@@ -92,6 +93,12 @@ paper_div.addEventListener('click',function(){
 })
 scissors_div.addEventListener('click',function(){
     game("s");
+})
+reset_button.addEventListener('click', function() {
+    userScore_span.innerHTML = 0;
+    computerScore_span.innerHTML = 0;
+    computerScore = 0;
+    userScore = 0;
 })
 }
 main();
